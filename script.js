@@ -8,7 +8,7 @@ const calculationBtn = document.getElementById('calculation');
 const remainBalance = document.getElementById('remain-balance');
 const savingAmount = document.getElementById('saving-amount');
 const lastBalance = document.getElementById('last-balance');
-
+const savingPercent = document.getElementById('saving-percent');
 
 //* DOM Events
 let costOfExpenses = 0;
@@ -19,8 +19,8 @@ calculationBtn.addEventListener('click', function () {
 
             //* error handle in expenses calculation part
             if (earning.value > costOfExpenses) {
-                totalExpenses.innerText = costOfExpenses;
-                remainBalance.innerText = earning.value - totalExpenses.innerText;
+                totalExpenses.innerText = savingAmount.innerText = costOfExpenses;
+                remainBalance.innerText = lastBalance.innerText = earning.value - totalExpenses.innerText;
             } else {
                 alert('You expenses has surpassed the earning of this month!!!');
                 break;

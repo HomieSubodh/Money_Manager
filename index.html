@@ -22,14 +22,37 @@
             font-weight: bold;
         }
 
-        #earning {
+        #earning,
+        #food,
+        #rent,
+        #clothes {
             padding-left: 25px;
-            background: url("media/piggy-bank.png") no-repeat 5px;
+            padding-top: 5px;
             background-size: 20px;
-            border: 2px solid;
             border-radius: 10px;
             text-align: center;
+            border: 2px solid lightblue;
         }
+
+        #earning {
+            background: url("media/piggy-bank.png") no-repeat 5px;
+        }
+
+        #food {
+            background: url("media/pot.png") no-repeat 5px;
+            background-color: white;
+        }
+
+        #rent {
+            background: url("media/rent.png") no-repeat 5px;
+            background-color: white;
+        }
+
+        #clothes {
+            background: url("media/clothes.png") no-repeat 5px;
+            background-color: white;
+        }
+
 
         .expenses {
             padding-left: 10px;
@@ -60,14 +83,18 @@
 
             <!--! Money Card  -->
             <div class="bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg p-4 lg:w-[450px] shadow-xl shadow-[grey]">
-                <h2 class="text-3xl mb-2 font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-rose-100 to-teal-100 text-center">Income</h2>
+                <h2
+                    class="text-3xl mb-2 font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-rose-100 to-teal-100 text-center">
+                    Income</h2>
 
                 <div class="flex flex-row justify-between mb-8">
                     <label for="">Earning: </label>
                     <input type="text" class="outline-1 outline-emerald-100 outline-offset-0" id="earning" required>
                 </div>
 
-                <h2 class="text-3xl mb-2 font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-rose-100 to-teal-100 text-center">Expenses</h2>
+                <h2
+                    class="text-3xl mb-2 font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-rose-100 to-teal-100 text-center">
+                    Expenses</h2>
 
                 <div class="flex flex-row justify-between items-center">
                     <div class="flex flex-col">
@@ -77,13 +104,13 @@
                     </div>
 
                     <div class="flex flex-col">
-                        <input type="text"
+                        <input id="food" type="text"
                             class="expenses rounded-lg drop-shadow-lg outline-1 outline-emerald-100 outline-offset-0 mb-3"
                             required>
-                        <input type="text"
+                        <input id="rent" type="text"
                             class="expenses rounded-lg drop-shadow-xl outline-1 outline-emerald-100 outline-offset-0 mb-3"
                             required>
-                        <input type="text"
+                        <input id="clothes" type="text"
                             class="expenses rounded-lg drop-shadow-xloutline-1 outline-emerald-100 outline-offset-0 mb-3"
                             required>
                     </div>
@@ -100,10 +127,13 @@
 
                     <div class="flex flex-col justify-around items-center w-full mt-5">
                         <div class="flex flex-col justify-center items-center w-full">
-                            <h2 class="text-3xl mb-2 font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-rose-100 to-teal-100">Save On Income </h2>
+                            <h2
+                                class="text-3xl mb-2 font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-rose-100 to-teal-100">
+                                Save On Income </h2>
                             <div class="flex flex-row justify-around w-full">
                                 <label for="text">Save: </label>
-                                <input id="saving-percent" class="h-[30px] px-2 rounded-lg outline-1 outline-green-500 outline-offset-0"
+                                <input id="saving-percent"
+                                    class="h-[30px] px-2 rounded-lg outline-1 outline-green-500 outline-offset-0"
                                     type="text" placeholder="0">
                                 <span>%</span>
                                 <button

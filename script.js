@@ -19,8 +19,8 @@ calculationBtn.addEventListener('click', function () {
 
             //* error handle in expenses calculation part
             if (earning.value > costOfExpenses) {
-                totalExpenses.innerText = savingAmount.innerText = costOfExpenses;
-                remainBalance.innerText = lastBalance.innerText = earning.value - totalExpenses.innerText;
+                totalExpenses.innerText = costOfExpenses;
+                remainBalance.innerText = earning.value - totalExpenses.innerText;
             } else {
                 alert('You expenses has surpassed the earning of this month!!!');
                 break;

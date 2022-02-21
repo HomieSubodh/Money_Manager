@@ -56,14 +56,14 @@
 
             <!--! Money Card  -->
             <div class="bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg p-4 lg:w-[450px] shadow-xl shadow-[grey]">
-                <h2 class="text-center mb-3 text-2xl">Income</h2>
+                <h2 class="text-3xl mb-2 font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-rose-100 to-teal-100 text-center">Income</h2>
 
                 <div class="flex flex-row justify-between mb-8">
                     <label for="">Earning: </label>
                     <input type="text" class="outline-1 outline-emerald-100 outline-offset-0" id="earning" required>
                 </div>
 
-                <h2 class="text-center mt-5 mb-3 text-2xl">Expenses</h2>
+                <h2 class="text-3xl mb-2 font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-rose-100 to-teal-100 text-center">Expenses</h2>
 
                 <div class="flex flex-row justify-between items-center">
                     <div class="flex flex-col">
@@ -95,17 +95,20 @@
                     </div>
 
                     <div class="flex flex-col justify-around items-center w-full mt-5">
-                        <div class="flex flex-row justify-around w-full">
-                            <label for="text">Save: </label>
-                            <input id="saving-percent" class="h-[30px] px-2 rounded-lg outline-1 outline-green-500 outline-offset-0"
-                                type="text" placeholder="0">
-                            <span>%</span>
-                            <button
-                                class="border rounded-md h-[30px] w-[70px] border-2 hover:border-black">Save</button>
+                        <div class="flex flex-col justify-center items-center w-full">
+                            <h2 class="text-3xl mb-2 font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-rose-100 to-teal-100">Save On Income </h2>
+                            <div class="flex flex-row justify-around w-full">
+                                <label for="text">Save: </label>
+                                <input id="saving-percent" class="h-[30px] px-2 rounded-lg outline-1 outline-green-500 outline-offset-0"
+                                    type="text" placeholder="0">
+                                <span>%</span>
+                                <button
+                                    class="border rounded-md h-[30px] w-[70px] border-2 hover:border-black">Save</button>
+                            </div>
                         </div>
                         <div class="flex flex-col justify-center items-center">
-                            <h2 class="mt-5">Saving Amount: <span id="saving-amount">&#2547; 5500</span></h2>
-                            <h2>Balance: <span id="last-balance">&#2547; 4500</span></h2>
+                            <h2 class="mt-5">Saving Amount: <span id="saving-amount">&#2547; 0</span></h2>
+                            <h2>Balance: <span id="last-balance">&#2547; 0</span></h2>
                         </div>
                     </div>
                 </div>

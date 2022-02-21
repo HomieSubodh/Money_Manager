@@ -27,6 +27,7 @@
             border-radius: 10px;
             text-align: center;
         }
+
         .expenses {
             padding-left: 10px;
         }
@@ -72,11 +73,14 @@
                     </div>
 
                     <div class="flex flex-col">
-                        <input type="text" class="expenses rounded-lg drop-shadow-lg outline-1 outline-emerald-100 outline-offset-0 mb-3"
+                        <input type="text"
+                            class="expenses rounded-lg drop-shadow-lg outline-1 outline-emerald-100 outline-offset-0 mb-3"
                             required>
-                        <input type="text" class="expenses rounded-lg drop-shadow-xl outline-1 outline-emerald-100 outline-offset-0 mb-3"
+                        <input type="text"
+                            class="expenses rounded-lg drop-shadow-xl outline-1 outline-emerald-100 outline-offset-0 mb-3"
                             required>
-                        <input type="text" class="expenses rounded-lg drop-shadow-xloutline-1 outline-emerald-100 outline-offset-0 mb-3"
+                        <input type="text"
+                            class="expenses rounded-lg drop-shadow-xloutline-1 outline-emerald-100 outline-offset-0 mb-3"
                             required>
                     </div>
                 </div>
@@ -87,20 +91,21 @@
                         <button id="calculation"
                             class="p-[8px] transition duration-700 ease-in-out border rounded-lg w-fit bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 hover:drop-shadow-2xl border-0">Calculate</button>
                         <h2 class="mt-12">Total Expenses: <span id="total-expenses">&#2547; 0</span></h2>
-                        <h2>Remain Balance: <span>&#2547; 4500</span></h2>
+                        <h2>Remain Balance: <span id="remain-balance">&#2547; 0</span></h2>
                     </div>
 
                     <div class="flex flex-col justify-around items-center w-full mt-5">
                         <div class="flex flex-row justify-around w-full">
                             <label for="text">Save: </label>
                             <input class="h-[30px] px-2 rounded-lg outline-1 outline-green-500 outline-offset-0"
-                                type="text" placeholder="20">
+                                type="text" placeholder="0">
                             <span>%</span>
-                            <button class="border rounded-md h-[30px] w-[70px]">Save</button>
+                            <button
+                                class="border rounded-md h-[30px] w-[70px] border-2 hover:border-black">Save</button>
                         </div>
-                        <div class="">
-                            <h2 class="mt-5">Total Expenses: <span>&#2547; 5500</span></h2>
-                            <h2>Remain Balance: <span>&#2547; 4500</span></h2>
+                        <div class="flex flex-col justify-center items-center">
+                            <h2 class="mt-5">Saving Amount: <span id="saving-amount">&#2547; 5500</span></h2>
+                            <h2>Balance: <span id="last-balance">&#2547; 4500</span></h2>
                         </div>
                     </div>
                 </div>

@@ -40,9 +40,16 @@ calculationBtn.addEventListener('click', function () {
     }
 });
 
-savingAmountBtn.addEventListener('click', function() {
-    savingAmount.innerText = parseFloat(earning.value) * parseFloat(savingPercent.value)/100;
+savingAmountBtn.addEventListener('click', function () {
+    if (savingPercent.value > 0) {
+        savingAmount.innerText = parseFloat(earning.value) * parseFloat(savingPercent.value) / 100;
+        if (remainBalance.innerText > savingAmount.innerText && remainBalance.innerText > 0) {
+            lastBalance.innerText = parseFloat(remainBalance.innerText) - parseFloat(savingAmount.innerText);
+        } else {
+            lastBalance.innerText = '0';
+        }
+    } else if (savingPercent.value = '') {
+        lastBalance.innerText = '0';
+    }
     savingPercent.value = '';
 });
-
-

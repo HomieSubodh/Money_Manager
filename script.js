@@ -9,6 +9,8 @@ const remainBalance = document.getElementById('remain-balance');
 const savingAmount = document.getElementById('saving-amount');
 const lastBalance = document.getElementById('last-balance');
 const savingPercent = document.getElementById('saving-percent');
+const savingAmountBtn = document.getElementById('saving-amount-btn');
+
 
 //* DOM Events
 let costOfExpenses = 0;
@@ -36,5 +38,11 @@ calculationBtn.addEventListener('click', function () {
         key.value = '';
         earning.value = '';
     }
-
 });
+
+savingAmountBtn.addEventListener('click', function() {
+    savingAmount.innerText = parseFloat(earning.value) * parseFloat(savingPercent.value)/100;
+    savingPercent.value = '';
+});
+
+
